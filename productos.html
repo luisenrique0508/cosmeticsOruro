@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos Americanos Oruro 💄💅🏻</title>
+    <link rel="stylesheet" href="stilo2.css">
+</head>
+<body>
+    <div class="header">
+        <h1>PRODUCTOS DE BELLEZA 💄💅🏻</h1>
+        <header class="banner">
+                <nav class="nav">
+                  <ul type="none">
+                    <li class="li"><a href="index.html">Inicio</a></li>
+                    <li class="li"><a href="productos.html">Productos</a></li>
+                    <li class="li carrito">
+                      <a href="pago.html">
+                        <img class="carrito" src="imagenes/carritodeCompras.png" alt="Carrito de compras" />
+                        <span id="cart-count">0</span> <!-- Aquí se mostrará el número de productos en el carrito -->
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                
+
+                <script>
+                document.getElementById('go-to-payment').addEventListener('click', function() {
+                    window.location.href = 'pago.html';
+                });
+                </script>
+            <nav class="nav">
+                <ul type="none">
+                    <li class="li"><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container">
+        <center><h1 class="section-title">Nuestros Productos</h1></center>
+        <div class="grid-container">
+            <!-- Los productos se cargarán aquí dinámicamente desde el archivo JSON -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/tu_perfil" target="_blank"><img src="imagenes/facebook.jpeg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/tu_perfil" target="_blank"><img src="imagenes/instagram.jpeg" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@cosmeticosamericanosor?_t=8oImxE5E3PB&_r=1" target="_blank"><img src="imagenes/tik tok.png" alt="TikTok"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="imagenes/whatsap.jpeg" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Somos Cosméticos Americanos Oruro</h4>
+            <ul>
+                <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+                <li><a href="#">Nuestra Historia</a></li>
+            </ul>
+            <center><p>&copy; 2024 Sitio Web Adaptable. Todos los derechos reservados. DISEÑADO Y REALIZADO POR </p></center>
+            <center><p>&copy; 2024 LUIS ENRIQUE LEDEZMA LOPEZ  </p></center>
+        </div>
+    </footer>
+    <script src="productos.js"></script>
+</body>
+</html>

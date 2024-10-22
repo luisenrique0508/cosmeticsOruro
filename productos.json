@@ -1,0 +1,130 @@
+{
+    "productos": [
+      {
+        "nombre": "Sombras en presentación de paleta tonos tierra",
+        "imagen": "imagenes/paleta de 16 tonos.jpeg",
+        "precio": "Bs25,00",
+        "precioAntiguo": "Bs50,00",
+        "descripcion": "Sombras en presentación de paleta tonos tierra"
+      },
+      {
+        "nombre": "Maquillaje facial envase de vidrio",
+        "imagen": "imagenes/base wet nwild.jpeg",
+        "precio": "Bs25,00",
+        "precioAntiguo": "Bs50,00",
+        "descripcion": "Maquillaje facial muy buena calidad en envase de vidrio"
+      },
+      {
+        "nombre": "Corrector de doble punta",
+        "imagen": "imagenes/WhatsApp Image 2024-07-24 at 19.50.43.jpeg",
+        "precio": "Bs25,00",
+        "precioAntiguo": "Bs40,00",
+        "descripcion": "Corrector de doble punta dos tonos diferentes"
+      },
+      {
+        "nombre": "Labiales de Loreal Paris en diferentes tonos",
+        "imagen": "imagenes/tonos de labial loreal.jpeg",
+        "precio": "Bs25,40",
+        "precioAntiguo": "Bs39,80",
+        "descripcion": "Labiales de Loreal Paris en diferentes tonos"
+      },
+      {
+        "nombre": "Bases en Baton en barra",
+        "imagen": "imagenes/bases en baton wet n wild.webp",
+        "precio": "Bs10,40",
+        "precioAntiguo": "Bs26,80",
+        "descripcion": "Bases en Baton en barra más prácticas"
+      },
+      {
+        "nombre": "Labial tipo Gloss sabor y olor mashmellow",
+        "imagen": "imagenes/cloudpout.jpeg",
+        "precio": "Bs18,40",
+        "precioAntiguo": "Bs36,80",
+        "descripcion": "Labial tipo Gloss con sabor y olor a marshmallow"
+      },
+      {
+        "nombre": "Protector de uñas transparente",
+        "imagen": "imagenes/protector-de-unas-shine-clear-wet-n-wild.jpg",
+        "precio": "Bs10,40",
+        "precioAntiguo": "Bs19,80",
+        "descripcion": "Protector de uñas transparente protege tus uñas de la mejor manera"
+      },
+      {
+        "nombre": "Labiales de City Color en barra 3x15",
+        "imagen": "imagenes/labiales de city color.jpg",
+        "precio": "Bs15,40",
+        "precioAntiguo": "Bs34,00",
+        "descripcion": "Labiales de City Color en barra 3x15"
+      },
+      {
+        "nombre": "Primer de rostro fija tu maquillaje",
+        "imagen": "imagenes/praimer de cara.jpeg.webp",
+        "precio": "Bs12,40",
+        "precioAntiguo": "Bs26,80",
+        "descripcion": "Primer de rostro fija tu maquillaje ante todo"
+      },
+      {
+        "nombre": "Rubor color rosa",
+        "imagen": "imagenes/rubor.jpeg",
+        "precio": "Bs10,40",
+        "precioAntiguo": "Bs17,80",
+        "descripcion": "Rubor color rosa muy buena pigmentación"
+      },
+      {
+        "nombre": "Maquillaje facial portable",
+        "imagen": "imagenes/base wet n weld2.jpg",
+        "precio": "Bs18,40",
+        "precioAntiguo": "Bs30,80",
+        "descripcion": "Maquillaje facial portable para cartera"
+      },
+      {
+        "nombre": "Labiales líquidos de City Color",
+        "imagen": "imagenes/tonos de wet n wild labiales.jpg.webp",
+        "precio": "Bs12,40",
+        "precioAntiguo": "Bs26,80",
+        "descripcion": "Labiales líquidos de City Color varios tonos disponibles"
+      },
+      {
+        "nombre": "Paleta de sombras tonos variados",
+        "imagen": "imagenes/paleta de coleccion.jpeg",
+        "precio": "Bs18,40",
+        "precioAntiguo": "Bs25,80",
+        "descripcion": "Paleta en diferentes tonos muy bellos"
+      },
+      {
+        "nombre": "Esmaltes acabado en gel",
+        "imagen": "imagenes/esmaltes en gel.jpeg",
+        "precio": "Bs8,40",
+        "precioAntiguo": "Bs16,80",
+        "descripcion": "Esmaltes acabado en gel no requieren lámpara"
+      },
+      {
+        "nombre": "Paleta de sombras de 10 tonos color tierra",
+        "imagen": "imagenes/paleta de 10 tonoa tierra.jpeg",
+        "precio": "Bs12,40",
+        "precioAntiguo": "Bs23,80",
+        "descripcion": "Paleta de sombras de 10 tonos color tierra"
+      },
+      {
+        "nombre": "Iluminador en polvo",
+        "imagen": "imagenes//iluminador.jpeg",
+        "precio": "Bs10,40",
+        "precioAntiguo": "Bs16,80",
+        "descripcion": "Iluminador en polvo"
+      },
+      {
+        "nombre": "Fijador de maquillaje 46ml",
+        "imagen": "imagenes/fijador de maquillaje.jpeg.webp",
+        "precio": "Bs18,40",
+        "precioAntiguo": "Bs36,80",
+        "descripcion": "Fijador de maquillaje de 46ml"
+      },
+      {
+        "nombre": "Fijador de maquillaje 46ml",
+        "imagen": "imagenes/polvo.jpg",
+        "precio": "Bs18,40",
+        "precioAntiguo": "Bs36,80",
+        "descripcion": "Fijador de maquillaje de 46ml"
+      }
+    ]
+  }
