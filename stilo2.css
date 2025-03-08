@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #f667ef;
+    color: rgb(255, 250, 250);
+    padding: 10px;
+    text-align: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: rgb(229, 56, 203);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+.section-title {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    border: 1px solid #db84db;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color:red;
+}
+
+.add-to-cart {
+    background-color: #be64dc;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.add-to-cart:hover {
+    background-color: #e09eed;
+}
+
+
+footer {
+    background-color: #be64dc;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 55px;
+    height: 55px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+}
+
+.social-icons a img:hover {
+    filter: grayscale(0%);
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .banner {
+        font-size: 20px;
+        height: 180px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .header {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .grid-item {
+        padding: 5px;
+    }
+
+    .add-to-cart {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner {
+        height: 10px;
+        font-size: 1px;
+    }
+
+    .section-title {
+        font-size: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .grid-item {
+        padding: 1px;
+    }
+
+    .add-to-cart {
+        padding: 2px;
+        font-size: 8px;
+    }
+    .nav ul li a{
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); 
+        
+    }
+    .li{
+        font-size: 10px;  
+        padding: 1px;
+    }
+}
+
+.tem {
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.nav {
+    background-color: #070107;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color:#f667ef;
+    padding: 1px 0;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #db3dd0;
+    padding: 1px 1px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.nav ul li a:hover {
+    background-color: #75009f;
+    transform: scale(1.1);
+}
+/* Estilos para el carrito */
+.carrito {
+    
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+  }
+  
+  #cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 55px;
+    height: 55px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+  }
+  
+  /* Estilos para el botón Pagar */
+  .pay-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 55px;
+    height: 55px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+  }
+  
+  .pay-button:hover {
+    background-color: #007bff;
+    width: 55px;
+    height: 55px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+  }

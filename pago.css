@@ -1,0 +1,183 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #fca7fa; 
+    color: rgb(255, 255, 255); 
+    padding: 10px 0; 
+    text-align: center; 
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+nav ul li {
+    display: inline; 
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none; 
+}
+
+
+main {
+    padding: 20px; 
+}
+
+.section {
+    margin-bottom: 20px; 
+}
+
+
+form {
+    display: flex; 
+    flex-direction: column; 
+    background-color: rgb(255, 218, 255);
+    
+}
+
+form label input {
+    margin-top: 10px; 
+    background-color: #f9b3f2;
+}
+
+
+button {
+    background-color: #e047e0; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 15px;
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+
+.qr {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.qr img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+footer {
+    background-color: #f4b3f8; 
+    color: white;
+    padding: 20px; 
+    text-align: center; 
+}
+
+.footer-section {
+    margin: 10px 0; 
+}
+
+
+.social-icons {
+    display: flex; 
+    justify-content: center; 
+    border-radius: 15px;
+}
+
+.social-icons a {
+    margin:  10px; 
+    border-radius: 15px;
+    width: 55px;
+    height: 55px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px
+}
+
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; 
+        margin: 5px 0; 
+    }
+
+    form {
+        align-items: center; 
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.5em; 
+    }
+
+    form {
+        width: 90%; /
+    }
+
+    button {
+        width: 50%; 
+    }
+}
+footer {
+    background-color: #f4b3f8; 
+    color: white;
+    padding: 20px; 
+    text-align: center; 
+}
+
+.footer-section {
+    margin: 10px 0; 
+}
+
+.social-icons {
+    display: flex; 
+    justify-content:end; 
+    gap: 15px;  
+}
+
+.social-iconos a img {
+    width: 55px; 
+    height: 55px; 
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+}
+
+.social-iconos a img:hover {
+    filter: grayscale(0%);
+}
+
+.footer-section {
+    width: 100%;  
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #db3dd0;
+    padding: 1px 1px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-size: 30px;
+}

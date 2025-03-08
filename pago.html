@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago - Cosméticos Americanos Oruro</title>
+    <link rel="stylesheet" href="pago.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Obtener el carrito del localStorage
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const resumenCompra = document.getElementById("resumen-compra");
+        const totalElement = document.getElementById("total");
+
+        // Generar el resumen de la compra
+        let total = 0;
+        carrito.forEach((producto) => {
+          const item = document.createElement("div");
+          item.classList.add("item");
+          item.innerHTML = `
+                    <p>${producto.nombre} - ${producto.precio}</p>
+                `;
+          resumenCompra.appendChild(item);
+          total += parseFloat(
+            producto.precio.replace("Bs", "").replace(",", ".")
+          );
+        });
+
+        totalElement.textContent = `Total a pagar: Bs${total.toFixed(2)}`;
+
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nombre = document.getElementById("nombre").value;
+          const celular = document.getElementById("celular").value;
+          const direccion = document.getElementById("direccion").value;
+          const departamento = document.getElementById("departamento").value;
+          const mensaje = document.getElementById("mensaje").value;
+          let resumenProductos = carrito
+            .map((producto) => `${producto.nombre} - ${producto.precio}`)
+            .join("\n");
+          let totalCarrito = `Total: Bs${total.toFixed(2)}`;
+          const textoWhatsApp = `Hola, soy ${nombre}.\n\nCelular: ${celular}\nDirección: ${direccion}\nDepartamento: ${departamento}\n\nDetalles de la compra:\n${resumenProductos}\n${totalCarrito}\n\nObservación Otros: ${mensaje}`;
+          const telefonoWhatsApp = "+59168367213";
+
+          const urlWhatsApp = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(
+            textoWhatsApp
+          )}`;
+
+          window.open(urlWhatsApp, "_blank");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>PAGO MEDIANTE CÓDIGO QR</h1>
+      <nav class="nav">
+        <ul type="none">
+          <li class="li"><a href="index.html">Inicio</a></li>
+          <li class="li"><a href="productos.html">Productos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="pago" class="section">
+        <h2>Resumen de Compra</h2>
+        <div id="resumen-compra"></div>
+        <p id="total"></p>
+
+        <h2>Llenar los datos para proceder al pago</h2>
+        <form id="contact-form">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="celular">Celular:</label>
+          <input type="tel" id="celular" name="celular" required />
+
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required />
+
+          <label for="departamento">Departamento:</label>
+          <select id="departamento" name="departamento" required>
+            <option value="" disabled selected>
+              Seleccione un departamento
+            </option>
+            <option value="La Paz">La Paz</option>
+            <option value="Cochabamba">Cochabamba</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Oruro">Oruro</option>
+            <option value="Potosí">Potosí</option>
+            <option value="Sucre">Sucre</option>
+            <option value="Beni">Beni</option>
+            <option value="Tarija">Tarija</option>
+          </select>
+
+          <label for="mensaje">Detalles de compra o alguna observación:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit" id="datos">Enviar mis Datos</button>
+        </form>
+
+        <p>
+          Gracias por su compra. Puede escanear el siguiente código QR para
+          realizar el pago:
+        </p>
+        <div class="qr">
+          <img src="imagenes/qr2025.jpg" alt="Código QR" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <div class="social-iconos">
+          <a href="https://www.facebook.com/tu_perfil" target="_blank"
+            ><img src="imagenes/facebook.jpeg" alt="Facebook"
+          /></a>
+          <a href="https://www.instagram.com/tu_perfil" target="_blank"
+            ><img src="imagenes/instagram.jpeg" alt="Instagram"
+          /></a>
+          <a
+            href="https://www.tiktok.com/@cosmeticosamericanosor?_t=8oImxE5E3PB&_r=1"
+            target="_blank"
+            ><img src="imagenes/tik tok.png" alt="TikTok"
+          /></a>
+          <a href="https://web.whatsapp.com/" target="_blank"
+            ><img src="imagenes/whatsap.jpeg" alt="WhatsApp"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Somos Cosméticos Americanos Oruro</h4>
+      </div>
+      <center>
+        <p>
+          &copy; 2024 Sitio Web Adaptable. Todos los derechos reservados.
+          DISEÑADO Y REALIZADO POR
+        </p>
+        <p>&copy; 2024 LUIS ENRIQUE LEDEZMA LOPEZ</p>
+      </center>
+    </footer>
+  </body>
+</html>
