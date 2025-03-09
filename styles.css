@@ -8,7 +8,6 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-image: url('imagenes/logoopcion2.jpeg');
     background-position: center;
     background-size:cover;
 }
@@ -125,7 +124,7 @@ footer {
 
 .footer-section ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 222, 222);
 }
 
 .footer-section ul li a:hover {
@@ -143,6 +142,7 @@ footer {
     filter: grayscale(100%);
     transition: filter 0.3s;
     border-radius: 10px;
+    align-items: center;
 }
 
 .social-icons a img:hover {

@@ -4,54 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .social-icons a img {
+    width: 55px;
+    height: 55px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    border-radius: 10px;
+}
+
+.social-icons a img:hover {
+    filter: grayscale(0%);
+}
+      body {
+        background-color: #ffe6fa;
+        overflow: hidden;
+      }
+      .video-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+      }
+      .video-container video {
+        width: 100%;
+        max-width: 400px;
+        height: 80vh;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(251, 8, 255, 0);
+        scroll-snap-align: start;
+
+      }
+      .navbar{background-color: #fdb2f3;}
+      .colllapse{
+
+        background-color: #ffc0f7;
+      }
+    </style>
   </head>
-  <body >
-    <header>
-      <h1>Blog</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="faq.html">Preguntas Frecuentes</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="productos.html">Productos</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="blog" class="section">
-        <h2>Blog</h2>
-        <p>Novedades de los productos vieen por temporadas</p>
-      </section>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <div class="column">
-            <video controls>
-                <source src="imagenes/video1.mp4" type="video/mp4">
-            
-            </video>
-        </div> 
-        <div class="column">
-<<<<<<< HEAD
-            <video controls class="video2.">
-=======
-            <video controls class="video2">
->>>>>>> 45330d73bf35b9ca2bd8f826e1bf5eae74965b13
-                <source src="imagenes/video2.mp4" type="video/mp4">
-              
-            </video>
+        <a class="navbar-brand" href="index.html">Blog de Cosméticos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          </ul>
         </div>
-    </div>
-
-
-
-
       </div>
+    </nav>
+
+    <main class="video-container mt-5 pt-5">
+      <video controls autoplay loop>
+        <source src="imagenes/video1.mp4" type="video/mp4">
+      </video>
+      <video controls autoplay loop>
+        <source src="imagenes/videocosm2.mp4" type="video/mp4">
+      </video>
     </main>
-    <footer>
-      <center><p>&copy; 2024 Sitio Web Adaptable. Todos los derechos reservados. DISEÑADO Y REALIZADO POR </p></center>
-        <center><p>&copy; 2024 LUIS ENRIQUE LEDEZMA LOPEZ  </p></center>
+
+    <!-- Footer -->
+    <footer class=" text-white text-center py-3 fixed-bottom">
+      <p>&copy; 2024 Sitio Web Adaptable. Todos los derechos reservados.</p>
+      <p>DISEÑADO Y REALIZADO POR LUIS ENRIQUE LEDEZMA LOPEZ</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -6,6 +6,48 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <style>
+    .section {
+      padding: 2rem;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+    .letra {
+      font-size: 20px;
+      color: #ffffff;
+    }
+    .pando{ color: #ff2f2f;}
+  </style>
   <body>
     <header>
       <h1>Contacto</h1>
@@ -23,32 +65,39 @@
     <main>
       <section id="contacto" class="section">
         <h2>Contacto para compras mayoristas</h2>
-        <form id="contact-form">
+        <form id="contact-form" onsubmit="enviarWhatsApp(event)">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="telefono">Teléfono:</label>
+
+          <label for="telefono">Número de Contacto:</label>
           <input type="tel" id="telefono" name="telefono" required />
+          <label class="pando">No hay envio derecto en bus a Pando desde 
+            Oruro de ninguna empresa </label>
+          <label for="departamento">Departamento:</label>
+          <select id="departamento" name="departamento" required>
+            <option value="">Seleccione un departamento</option>
+            <option value="La Paz">La Paz</option>
+            <option value="Cochabamba">Cochabamba</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Oruro">Oruro</option>
+            <option value="Potosí">Potosí</option>
+            <option value="Sucre">Sucre</option>
+            <option value="Tarija">Tarija</option>
+            <option value="Beni">Beni</option>
+          </select>
 
           <label for="asunto">Asunto:</label>
-          <input type="text" id="asunto" name="asunto" required />
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" required></textarea>
+          <textarea id="asunto" name="asunto" required></textarea>
 
-          <button type="submit">Enviar</button>
+          <button class="butom" type="submit">Enviar</button>
         </form>
 
-        <p>
-          Debemos unificar las diferentes vías en las que los posibles clientes
-          pueden ponerse en contacto con nuestro negocio y es recomendablellenar
-          el formulario de contacto, email, teléfono.
-        </p>
+        <p class="letra"></p>
       </section>
     </main>
     <footer>
       <div class="footer-section">
-        <h4>Síguenos</h4>
+        <h4>Síguenos en nuestras redes sociales:</h4>
         <div class="social-icons">
           <a href="https://www.facebook.com/tu_perfil" target="_blank"
             ><img src="imagenes/facebook.jpeg" alt="Facebook"
@@ -61,8 +110,8 @@
             target="_blank"
             ><img src="imagenes/tik tok.png" alt="YouTube"
           /></a>
-          <a href="#" target="_blank"
-            ><img src="imagenes/whatsap.jpeg" alt="Facebook"
+          <a href="https://wa.me/59179339286" target="_blank"
+            ><img src="imagenes/whatsap.jpeg" alt="WhatsApp"
           /></a>
         </div>
       </div>
@@ -74,8 +123,13 @@
         </ul>
       </div>
 
-      <center><p>&copy; 2024 Sitio Web Adaptable. Todos los derechos reservados. DISEÑADO Y REALIZADO POR </p></center>
-        <center><p>&copy; 2024 LUIS ENRIQUE LEDEZMA LOPEZ  </p></center>
+      <center>
+        <p>
+          &copy; 2024 Sitio Web Adaptable. Todos los derechos reservados.
+          DISEÑADO Y REALIZADO POR
+        </p>
+      </center>
+      <center><p>&copy; 2024 LUIS ENRIQUE LEDEZMA LOPEZ</p></center>
     </footer>
     <script src="scripts.js"></script>
   </body>
