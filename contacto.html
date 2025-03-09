@@ -7,49 +7,119 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
     .section {
       padding: 2rem;
     }
 
     form {
-      max-width: 400px;
-      margin: 0 auto;
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     label {
       display: block;
       margin-bottom: 0.5rem;
+      color: #333;
     }
 
     input,
-    textarea {
+    textarea,
+    select {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.75rem;
       border: 1px solid #ccc;
-      border-radius: 3px;
+      border-radius: 4px;
       margin-bottom: 1rem;
+      font-size: 1rem;
     }
 
     button {
-      padding: 0.5rem 1rem;
-      background-color: #333;
+      padding: 0.75rem 1.5rem;
+      background-color: #4caf50;
       color: #fff;
       border: none;
-      border-radius: 3px;
+      border-radius: 4px;
       cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      display: block;
+      width: 100%;
     }
 
     button:hover {
-      background-color: #222;
+      background-color: #45a049;
     }
+
     .letra {
       font-size: 20px;
       color: #ffffff;
     }
-    .pando{ color: #ff2f2f;}
+
+    .pando {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .cuerpo {
+      background-color: #99c2ff;
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    .link {
+      background-color: #8fcafb;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .link a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    .pie {
+      background-color: #8fcafb;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .footer-section {
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      margin: 0 0.5rem;
+    }
   </style>
-  <body>
-    <header>
+  <body class="cuerpo">
+    <header class="link">
       <h1>Contacto</h1>
       <nav>
         <ul>
@@ -63,16 +133,18 @@
       </nav>
     </header>
     <main>
-      <section id="contacto" class="section">
-        <h2>Contacto para compras mayoristas</h2>
+      <section class="for" id="contacto" class="section">
+        <center><h2>PARA SOLICITAR UNA COMPRA MAYORISTA LLENE EL FORMULARIO</h2></center>
+        <center><h2>👇🏻</h2></center>
         <form id="contact-form" onsubmit="enviarWhatsApp(event)">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
 
           <label for="telefono">Número de Contacto:</label>
           <input type="tel" id="telefono" name="telefono" required />
-          <label class="pando">No hay envio derecto en bus a Pando desde 
-            Oruro de ninguna empresa </label>
+          <label class="pando"
+            >No hay envio derecto en bus a Pando desde Oruro de ninguna empresa
+          </label>
           <label for="departamento">Departamento:</label>
           <select id="departamento" name="departamento" required>
             <option value="">Seleccione un departamento</option>
@@ -89,13 +161,13 @@
           <label for="asunto">Asunto:</label>
           <textarea id="asunto" name="asunto" required></textarea>
 
-          <button class="butom" type="submit">Enviar</button>
+          <button class="buton" type="submit">Enviar</button>
         </form>
 
         <p class="letra"></p>
       </section>
     </main>
-    <footer>
+    <footer class="pie">
       <div class="footer-section">
         <h4>Síguenos en nuestras redes sociales:</h4>
         <div class="social-icons">

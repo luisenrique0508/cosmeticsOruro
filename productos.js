@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Limpiar el carrito al cargar la página
-    limpiarCarrito();
+    // limpiarCarrito(); // Comentado para no limpiar el carrito al cargar la página
     
     fetch("productos.json")
         .then((response) => response.json())
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p class="card-text">${producto.descripcion}</p>
                                 <p class="fw-bold">Precio: ${producto.precio}</p>
-                                <button class="btn btn-primary add-to-cart" data-nombre="${producto.nombre}" data-precio="${producto.precio}">Agregar al carrito</button>
+                                <button class="btn btn-primary add-to-cart" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.addEventListener("click", (event) => {
                     const nombre = event.target.getAttribute("data-nombre");
                     const precio = event.target.getAttribute("data-precio");
-                    agregarAlCarrito({ nombre, precio });
+                    const imagen = event.target.getAttribute("data-imagen");
+                    agregarAlCarrito({ nombre, precio, imagen });
                 });
             });
         })
@@ -58,7 +59,6 @@ function actualizarContadorCarrito() {
     const contador = document.getElementById("cart-count");
     contador.textContent = total;
     contador.style.display = total > 0 ? "inline" : "none";
-    
 }
 
 function limpiarCarrito() {

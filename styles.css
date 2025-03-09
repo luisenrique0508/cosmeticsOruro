@@ -10,11 +10,11 @@ body {
     line-height: 1.6;
     background-position: center;
     background-size:cover;
-    background-color: #fcb6fa;
+    background-color: #ff7ff9;
 }
 
 header {
-    background: #d781ff;
+    background: #e6b2fe;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -101,7 +101,7 @@ video{
 
 
 footer {
-    background-color: #dd71df;
+    background-color: #fedeff;
     padding: 20px;
     text-align: left;
 }
